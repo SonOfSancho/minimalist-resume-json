@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Adam Sánchez Marín - Currículum</title>
+	</head>
+	<body class="antialiased bg-zinc-50 dark:bg-[#0F172A] font-default text-zinc-600 dark:text-zinc-200 tracking-tighter">
+		<slot />
+	</body>
+</html>
+
+<style>
+  @media print {
+    @page {
+      margin: 0;
+      size: A4;
+    }
+    body {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    #cv-content {
+    margin: 0;
+    }
+  }
+</style>

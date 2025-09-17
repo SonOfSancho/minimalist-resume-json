@@ -1,0 +1,39 @@
+---
+import "../styles/global.css";
+import Layout from '@/layouts/Layout.astro';
+import Experience from "@/components/sections/Experience.astro";
+import Skills from "@/components/sections/Skills.astro";
+import Hero from "@/components/sections/Hero.astro";
+import Education from "@/components/sections/Education.astro";
+import Languajes from "@/components/sections/Languajes.astro";
+import About from "@/components/sections/About.astro";
+import KeyboardManager from "@/components/sections/KeyboardManager.astro";
+import DarkModeSwitch from "@/components/DarkModeSwitch.astro";
+
+import { basics } from '@cv'
+const { name } = basics
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout title=`${name} - Currículum`>
+	<DarkModeSwitch />
+
+	<main class="max-w-[21cm] mt-8 mb-8 mx-auto p-10 bg-white dark:bg-[#1E293B] min-h-[29.7cm] shadow-xl print:shadow-none dark:border dark:border-white/5 print:m-0">
+		<Hero />
+		<About />
+		<ul class="grid grid-cols-1 print:grid-cols-2 gap-x-12">
+			<li>
+				<Experience />
+			</li>
+			<li class="flex flex-col-reverse print:flex-col">
+				<Skills />
+				<Languajes />
+				<Education />
+			</li>
+		</ul>
+	</main>
+
+	<KeyboardManager />
+</Layout>

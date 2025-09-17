@@ -1,0 +1,94 @@
+---
+import Section from '@/components/Section.astro'
+import Mail from '@/components/icons/Mail.astro'
+import Phone from '@/components/icons/Phone.astro'
+import X from '@/components/icons/X.astro'
+import LinkedIn from '@/components/icons/LinkedIn.astro'
+import GitHub from '@/components/icons/GitHub.astro'
+import WorldMap from '@/components/icons/WorldMap.astro'
+import Link from '@/components/icons/Link.astro'
+import { basics } from '@cv'
+
+const { name, label, image, location, profiles, phone, email, url } = basics
+const { city, region } = location
+
+const SOCIAL_ICONS: Record<string, any> = {
+    X,
+    LinkedIn,
+    GitHub
+}
+
+const linkedInfo = profiles?.find(profile => profile.network === 'LinkedIn')?.url || ''
+const printInfo = [email, phone, linkedInfo].filter(Boolean).join(' / ')
+---
+
+<Section>
+    <div class="flex items-center justify-between gap-8 border-b-2 border-zinc-200 pb-3">
+        <div class="flex flex-col gap-2 pr-4">
+            <h1 class="text-3xl font-bold font-title text-balance text-zinc-950 dark:text-zinc-50">{name}</h1>
+            <h2 class="text-md font-title text-balance">{label}</h2>
+            <span class="flex items-center gap-x-6 tracking-tight">
+                <span class="flex items-center gap-x-2">
+                    <WorldMap />
+                    {city}, {region}
+                </span>
+                <span class="hidden print:flex items-center gap-x-1">
+                    <Link />
+                    {url}
+                </span>
+            </span>
+            <footer>
+                <div class="hidden print:block">
+                    {printInfo}
+                </div>
+                <div class="flex items-center gap-2 print:hidden">
+                    {
+                        email && (
+                            <a 
+                                href={`mailto:${email}`}
+                                title={`Enviar un correo electrónico a ${name} al correo ${email}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="inline-flex items-center justify-center border p-2 rounded-md transition-all text-zinc-600 border-zinc-200 hover:bg-zinc-100 hover:text-zinc-900 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-zinc-100"
+                            >
+                                <Mail/>
+                            </a>
+                        )
+                    }
+                    {
+                        phone && (
+                            <a 
+                                href={`tel:${phone}`}
+                                title={`Llamar por teléfono a ${name} al número ${phone}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="inline-flex items-center justify-center border p-2 rounded-md transition-all text-zinc-600 border-zinc-200 hover:bg-zinc-100 hover:text-zinc-900 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-zinc-100"
+                            >
+                                <Phone/>
+                            </a>
+                        )
+                    }
+                    {
+                        profiles && profiles.map(({ network, url }) => {
+                            const Icon = SOCIAL_ICONS[network]
+                            return (
+                                <a 
+                                    href={url}
+                                    title={`Perfil de ${name} en ${network}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="inline-flex items-center justify-center border p-2 rounded-md transition-all text-zinc-600 border-zinc-200 hover:bg-zinc-100 hover:text-zinc-900 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-zinc-100"
+                                >
+                                    {Icon ? <Icon/> : <X/>}
+                                </a>
+                            )
+                        })
+                    }
+                </div>
+            </footer>
+        </div>
+        <figure class="flex-shrink-0">
+            <img src={image} alt={`Foto de ${name}`} class="aspect-square object-cover w-28 h-28 rounded-md" />
+        </figure>
+    </div>
+</Section>

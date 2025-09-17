@@ -1,0 +1,80 @@
+{
+  "basics": {
+    "name": "Adam Sánchez Marín",
+    "label": "Desarrollador de Software Full Stack Junior",
+    "image": "src/assets/pfp.png",
+    "email": "adamsanchezmarin@proton.me",
+    "phone": "617618113",
+    "url": "cv.adamsanchez.dev",
+    "summary": "Desarrollador Full Stack Junior con sólida base técnica en tecnologías web modernas. Apasionado por el desarrollo de software robusto y escalable, con gran capacidad de aprendizaje y motivación por mantenerse actualizado en las últimas tendencias del sector.",
+    "location": {
+      "address": "Carrer de la Ciencia, 12",
+      "postalCode": "08917",
+      "city": "Badalona",
+      "region": "Barcelona"
+    },
+    "profiles": [{
+      "network": "LinkedIn",
+      "url": "https://www.linkedin.com/in/adam-sánchez-marín-5a0542382"
+    },{
+      "network": "GitHub",
+      "url": "https://github.com/SonOfSancho"
+    }]
+  },
+  "work": [{
+    "name": "Inmogest S.A.",
+    "position": "Digitador",
+    "url": "https://www.infojobs.net/inmogest-s.a./em-i97485655495154737877799016136426604696/",
+    "startDate": "2023-9",
+    "endDate": "2023-12",
+    "summary": "Llevé a cabo un proyecto integral de digitalización de documentos legales y financieros en bases de datos SQL, lo que permitió optimizar la gestión documental y mejorar significativamente la accesibilidad y trazabilidad de la información.",
+    "tags": ["SQL", "SGBD"]
+  },{
+    "name": "Erynek3D z.o.o.",
+    "position": "Desarrollador Full Stack - Erasmus",
+    "url": "https://erynek3d.pl",
+    "startDate": "2024-5",
+    "endDate": "2024-7",
+    "summary": "Desarrollé una plataforma de comercio electrónico especializada en la venta de planos 3D, implementando una arquitectura moderna con Laravel en el backend y React en el frontend. Gestioné con MySQL y Stripe un almacenamiento eficiente de productos y transacciones garantizando una experiencia de usuario fluida y segura.",
+    "tags": ["PHP", "Laravel", "JavaScript", "React", "Docker", "Inertia.js", "Stripe", "MySQL"]
+  },{
+    "name": "3llideas",
+    "position": "Desarrollador Full Stack - DUAL",
+    "url": "https://www.3llideas.com",
+    "startDate": "2024-9",
+    "endDate": "2025-7",
+    "summary": "Desarrollé soluciones personalizadas mediante la integración de APIs con JavaScript y Ruby on Rails. Implementé dashboards dinámicos en Javascript conectados a InfluxDB para visualización de datos en tiempo real, y automaticé despliegues, backups y monitorización de servores en Proxmox mediante tareas de ruby.",
+    "tags": ["Ruby", "Ruby on Rails", "JavaScript", "Docker", "Proxmox API", "PostgreSQL", "InfluxDB", "Grafana"]
+  }],
+  "education": [{
+    "institution": "INS La Pineda",
+    "studyType": "CFGM Sistemas Microinformáticos y Redes",
+    "startDate": "2021-09",
+    "endDate": "2023-07"
+  }, 
+  {
+    "institution": "INS La Pineda",
+    "studyType": "CFGS Desarrollo de Aplicaciones Web",
+    "startDate": "2023-09",
+    "endDate": "2025-07"
+  },
+  {
+    "institution": "UOC",
+    "studyType": "Ingeniero de Software",
+    "startDate": "2025-09",
+    "endDate": ""
+  }],
+  "skills": ["JavaScript", "React", "Node.js", "Ruby", "Ruby on Rails", "MySQL", "PostgreSQL", "Docker", "HTML", "CSS", "Git", "Linux", "PHP", "Laravel", "SQLite", "MongoDB", "GitHub", "GitLab"],
+  "languages": [{
+    "language": "Español",
+    "fluency": "Nativo"
+  },
+  {
+    "language": "Catalán",
+    "fluency": "Nativo"
+  },
+  {
+    "language": "Inglés",
+    "fluency": "First Certificate (B2)"
+  }]
+}

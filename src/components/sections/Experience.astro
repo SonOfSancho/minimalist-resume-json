@@ -1,0 +1,38 @@
+---
+import Section from '../Section.astro';
+
+import { work } from '@cv';
+---
+
+<Section title="Experiencia">
+<ul>
+    {
+        work && work.map(({ position, name, startDate, endDate, summary, tags, url }, index) => (
+            <li class="mb-6">
+                <header class="flex flex-col sm:flex-row sm:justify-between gap-2 sm:items-center mb-2">
+                    <div>
+                        <h3 class="flex items-center gap-1 flex-wrap">
+                            <a href={url} target="_blank" rel="noopener noreferrer" class="text-lg font-semibold text-nowrap w-min sm:w-fit hover:underline text-zinc-800 dark:text-zinc-100">
+                                {name}
+                            </a>
+                            {
+                                tags && tags.length > 0 && tags.map((tag, idx) => (
+                                    <span class="text-xs font-mono flex items-center font-semibold bg-zinc-100 dark:bg-[#1b2233] text-zinc-700 dark:text-zinc-300 px-2 py-0.5 rounded-md print:hidden">{tag}</span>
+                                ))
+                            }
+                        </h3>
+                    </div>
+                    <span class="text-sm text-zinc-500 dark:text-zinc-400 mt-1 sm:mt-0 text-nowrap">
+                        {new Date(startDate).toLocaleDateString('es-ES', { year: 'numeric', month: 'short' })} - {endDate ? new Date(endDate).toLocaleDateString('es-ES', { year: 'numeric', month: 'short' }) : 'Actualidad'}
+                    </span>
+                </header>
+                <p class="text-lg font-title font-semibold">{position}</p>
+                {summary && <footer>
+                                <p class="leading-relaxed text-sm print:text-xs">{summary}</p>
+                            </footer>
+                }
+            </li>
+        ))
+    }
+</ul>
+</Section>
