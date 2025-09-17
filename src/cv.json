@@ -2,7 +2,7 @@
   "basics": {
     "name": "Adam Sánchez Marín",
     "label": "Desarrollador de Software Full Stack Junior",
-    "image": "src/assets/pfp.png",
+    "image": "/pfp.png",
     "email": "adamsanchezmarin@proton.me",
     "phone": "617618113",
     "url": "cv.adamsanchez.dev",
