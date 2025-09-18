@@ -43,7 +43,7 @@
     "url": "https://www.3llideas.com",
     "startDate": "2024-9",
     "endDate": "2025-7",
-    "summary": "Desarrollé soluciones personalizadas mediante la integración de APIs con JavaScript y Ruby on Rails. Implementé dashboards dinámicos en Javascript conectados a InfluxDB para visualización de datos en tiempo real, y automaticé despliegues, backups y monitorización de servores en Proxmox mediante tareas de ruby.",
+    "summary": "Desarrollé soluciones personalizadas mediante la integración de APIs con JavaScript y Ruby on Rails. Implementé dashboards dinámicos en Javascript conectados a InfluxDB para visualización de datos en tiempo real, y automaticé despliegues, backups y monitorización de servidores en Proxmox mediante tareas de ruby.",
     "tags": ["Ruby", "Ruby on Rails", "JavaScript", "Docker", "Proxmox API", "PostgreSQL", "InfluxDB", "Grafana"]
   }],
   "education": [{
